@@ -1,6 +1,24 @@
+//Inicializamos todos los elementos del juego (por ejemplo el canvas)
+//Objetos del juego
 
+var ctx;
 
-//Inicializamos todos los elementos del juego
+function render(source,positionX,positionY){
+  var ready = false;
+  var image = new Image();
+  image.onload = function(){
+    ready = true;
+    console.log(ready);
+  };
+
+  image.src = source;
+  console.log(ready);
+  if (ready){
+    ctx.drawImage(image,positionX, positionY);
+  }
+  console.log(ready);
+}
+
 function cartaMazo(nombre, coste, color, descripcion){
   this.nombre = nombre;
   this.coste = coste;
@@ -136,7 +154,8 @@ function initCartasMazo(){
   cartasMazo.push(cardPurpleType14);
 }
 
-//Para randomizar arrays
+//Para randomizar arrays -> Si quiero ser ordenado, aunque lo utilice aqui
+//Esto posiblemente vaya en el engine
 function shuffle(array) {
   var currentIndex = array.length, temporaryValue, randomIndex;
   // While there remain elements to shuffle...
@@ -156,22 +175,26 @@ function shuffle(array) {
 //Fondo, tamaño (importante), localicacion y demas
 function createCanvas(){
   var canvas = document.createElement("canvas");
-  var ctx = canvas.getContext("2d");
+  ctx = canvas.getContext("2d");
   canvas.width = 512;
   canvas.height = 480;
   document.body.appendChild(canvas);
-
   //Informamos al usuario si no podemos obtener el contexto
   if (!ctx) {
     alert('Please upgrade your browser');
     return;
   }
+  //Background image
+  var source = 'images/Varias/background.jpg';
+  render(source,0,0);
 }
 
 function initializeGame() {
   createCanvas();
-  initCartasMazo();
-  shuffle(cartasMazo);
+
+  //initCartasMazo();
+  //shuffle(cartasMazo);
+  console.log("Fin ejecucion. No puede haber nada despues de esto");
 }
 
 /**
