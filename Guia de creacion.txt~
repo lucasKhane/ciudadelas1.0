@@ -1,11 +1,13 @@
 x-Asignar sources de las imagenes
--Poner un mazo con su imagen en cualquier sitio e ir sacando cartas al clickear
--Inicializar jugadores
+xPoner un mazo con su imagen en cualquier sitio e ir sacando cartas al clickear
+xArregladas imagenes mal puestas :-(
+xMazo de personajes colocado y cambio de nombres
+xInicializar jugadores
 	-Selector de numero de jugadores
 	-Asignar ya los espacios de cada futuro distrito de jugador
--Inicializar cartas de personaje
+xInicializar cartas de personaje
 -Sortear corona
--Desplegar turno inicial, cartas robadas y monedas
+xDesplegar turno inicial, cartas robadas y monedas
 -Colocar cartas robadas del jugador en algun sitio
 -Inteligencia de como funcionaran los turnos dependiendo de los jugadores
 -Inteligencia de final de juego

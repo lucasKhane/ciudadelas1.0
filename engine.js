@@ -65,12 +65,14 @@ function render(source,positionX,positionY){
 }
 
 function drawCard(){
-  if (mazo.cartasMazo.length != 0){
-    var drawedCard = mazo.cartasMazo.shift();
-    console.log(drawedCard);
+  if (mazoDistritos.cartasMazo.length != 0){
+    var drawedCard = mazoDistritos.cartasMazo.shift();
+    //console.log(drawedCard);
     //Temporal
     render(drawedCard.source,0,0);
+    return drawedCard;
   }else{
     alert("Oh! No quedan cartas en el mazo!");
+    return null;
   }
 }
