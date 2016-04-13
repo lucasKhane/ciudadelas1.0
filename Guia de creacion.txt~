@@ -9,4 +9,7 @@ x-Asignar sources de las imagenes
 -Colocar cartas robadas del jugador en algun sitio
 -Inteligencia de como funcionaran los turnos dependiendo de los jugadores
 -Inteligencia de final de juego
+-Hacer el motor de cada personaje
+-Hacer el motor del turno de un jugador. Personaje. Cobrar. Construir..etc
+-Probarlo para un jugador
 -Hacerlo en red

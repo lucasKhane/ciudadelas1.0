@@ -11,9 +11,9 @@ $(document).ready(function(){
     var offsetTop = canvas.offsetTop;
     //Mazo
     if ((e.pageX-offsetLeft > mazo.Xcoord)&&
-    (e.pageX-offsetLeft< mazo.Xcoord + mazo.width)&&
-    (e.pageY-offsetTop > mazo.Ycoord)&&
-    (e.pageY-offsetTop< mazo.Ycoord + mazo.height)){
+      (e.pageX-offsetLeft< mazo.Xcoord + mazo.width)&&
+      (e.pageY-offsetTop > mazo.Ycoord)&&
+      (e.pageY-offsetTop< mazo.Ycoord + mazo.height)){
       console.log("Clicked");
       //Robamos una carta
       drawCard();

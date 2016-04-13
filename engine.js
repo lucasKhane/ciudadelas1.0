@@ -62,8 +62,15 @@ function render(source,positionX,positionY){
     ctx.drawImage(image,positionX,positionY);
     console.log("Imagen dibujada: "+positionX+","+positionY);
   });
+}
 
-  function drawCard(){
-
+function drawCard(){
+  if (mazo.cartasMazo.length != 0){
+    var drawedCard = mazo.cartasMazo.shift();
+    console.log(drawedCard);
+    //Temporal
+    render(drawedCard.source,0,0);
+  }else{
+    alert("Oh! No quedan cartas en el mazo!");
   }
 }
