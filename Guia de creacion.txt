@@ -1,0 +1,2 @@
+-Asignar sources de las imagenes
+-Poner un mazo con su imagen en cualquier sitio e ir sacando cartas al clickear
