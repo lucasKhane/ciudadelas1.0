@@ -1,9 +1,9 @@
 
-var ctx; //No me acaba de gustar tener esta variable global
-var canvas; //Y mucho menos esta otra
+var ctx;
+var canvas;
 var mazoDistritos = new mazoDistritos();
 var mazoPersonajes = new mazoPersonajes();
-var jugadores = [];
+var jugadores = new jugadores();
 
 function initializeGame() {
   var width = 1280; var height = 800;
@@ -12,8 +12,9 @@ function initializeGame() {
   shuffle(mazoDistritos.cartasMazo); //Barajeamos
   initCartasMazoPersonajes();
   shuffle(mazoPersonajes.cartasPersonaje);
+  //En un futuro initJugadores() vendrá aquí
+  //En un futuro sortearCorona() vendrá aquí
   asignCoords();
-  //Sortear corona
   drawAll();
   console.log("Fin ejecucion initializeGame()");
 }

@@ -51,6 +51,10 @@ function mazoPersonajes(){
   this.height = 120;
 }
 
+function jugadores(){
+  this.jugador = [];
+}
+
 function  initJugadores(){
   var monedas = 4;
   for (i = 1; i <= numplayers; i++){
@@ -87,42 +91,42 @@ function  initJugadores(){
       jugador.cartasMazoDistritos.push(cartaDistrito);
       console.log("Carta de mano num: "+u+". Descripcion: "+cartaDistrito);
     }
-    jugadores.push(jugador);
+    jugadores.jugador.push(jugador);
   }
   console.log(jugadores);
-  switch (jugadores.length){
+  switch (jugadores.jugador.length){
   case 1:
-      jugadores[0].order = 1;
+      jugadores.jugador[0].order = 1;
       break;
   case 2:
-      jugadores[0].order = 1;
-      jugadores[1].order = 2;
+      jugadores.jugador[0].order = 1;
+      jugadores.jugador[1].order = 2;
       break;
   case 3:
-      jugadores[0].order = 1;
-      jugadores[1].order = 3;
-      jugadores[2].order = 2;
+      jugadores.jugador[0].order = 1;
+      jugadores.jugador[1].order = 3;
+      jugadores.jugador[2].order = 2;
       break;
   case 4:
-      jugadores[0].order = 1;
-      jugadores[1].order = 4;
-      jugadores[2].order = 2;
-      jugadores[3].order = 3;
+      jugadores.jugador[0].order = 1;
+      jugadores.jugador[1].order = 4;
+      jugadores.jugador[2].order = 2;
+      jugadores.jugador[3].order = 3;
       break;
   case 5:
-      jugadores[0].order = 1;
-      jugadores[1].order = 5;
-      jugadores[2].order = 3;
-      jugadores[3].order = 4;
-      jugadores[4].order = 2;
+      jugadores.jugador[0].order = 1;
+      jugadores.jugador[1].order = 5;
+      jugadores.jugador[2].order = 3;
+      jugadores.jugador[3].order = 4;
+      jugadores.jugador[4].order = 2;
       break;
   case 6:
-      jugadores[0].order = 1;
-      jugadores[1].order = 6;
-      jugadores[2].order = 3;
-      jugadores[3].order = 4;
-      jugadores[4].order = 2;
-      jugadores[5].order = 5;
+      jugadores.jugador[0].order = 1;
+      jugadores.jugador[1].order = 6;
+      jugadores.jugador[2].order = 3;
+      jugadores.jugador[3].order = 4;
+      jugadores.jugador[4].order = 2;
+      jugadores.jugador[5].order = 5;
       break;
   }
 }
@@ -287,7 +291,8 @@ function asignCoords(){
   mazoPersonajes.Ycoord = canvas.height/2 - mazoPersonajes.height/2;
 }
 
-//Redibuja todo (en principio no necesario) - (Tras comentarla me parece mas util)
+//Redibuja todo (en principio no necesario) - (Tras comentarla me parece mas util por si durante el juego
+//aparecieran elementos del dom nuevo y cambiara el offset del canvas)
 function drawAll(){
   //Mazo image
   source = 'images/Reverse/revCartaMazo.jpg';
@@ -296,6 +301,12 @@ function drawAll(){
   render(source, mazoPersonajes.Xcoord, mazoPersonajes.Ycoord); //Dibujamos el mazo de perseonajes
   //Cosas en la mesa construidas por jugadores
   //Mano de jugador y monedas y poco mas
+}
+
+function sortearCorona(){
+  var i = Math.floor(Math.random()*jugadores.jugador.length);
+  console.log(i);
+  jugadores.jugador[i].corona = true;
 }
 
 //Va en funcion pues en realidad hay muchas cosas que modificar

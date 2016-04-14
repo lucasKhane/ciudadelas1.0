@@ -27,6 +27,7 @@ $(document).ready(function(){
     numplayers = spinner.spinner("value");
     spinner.spinner( "disable" );
     initJugadores(); //MEZCLA:!!! No podemos inicializar jugadores antes de elegir un numero :-)
+    sortearCorona(); //MEZCLA:!!! No podemos sortear corona antes de elegir un numero :-)
   });
 
 });

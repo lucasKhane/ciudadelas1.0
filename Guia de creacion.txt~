@@ -8,7 +8,7 @@ xInicializar jugadores
 xInicializar cartas de personaje
 -Sortear corona
 xDesplegar turno inicial, cartas robadas y monedas
--Colocar cartas robadas del jugador en algun sitio
+-Colocar cartas robadas propias en algun sitio(esto casi mejo cuando sea online)
 -Inteligencia de como funcionaran los turnos dependiendo de los jugadores
 -Inteligencia de final de juego
 -Hacer el motor de cada personaje
